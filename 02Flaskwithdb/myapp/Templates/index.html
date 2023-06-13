@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todos</h1>
+
+    {% for todo in todos %} <!--For loop that lists all todos from todo variable-->
+        <li>{{ todo.todo_text }}</li>
+
+    {% endfor %}
+
+    <form method="POST">
+        {{ template_form.hidden_tag() }} <!--Hides security key-->
+        <p>
+            {{ template_form.todo.label }} <!-- pulls from class, todo variable and the label 'Todo'-->
+            {{ template_form.todo() }}  <!--Text field-->
+        </p>
+        <p> {{ template_form.submit() }} </p> <!--Submit button-->
+    </form>
+
+</body>
+</html>
