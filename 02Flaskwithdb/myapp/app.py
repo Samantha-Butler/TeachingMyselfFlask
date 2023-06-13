@@ -6,7 +6,6 @@ from flask_sqlalchemy import SQLAlchemy    #Class to interact with database
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///myDB.db' # ORM
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/frenz/Desktop/Sam/Python/Flask/02_Flaskwithdb/myapp/myDB.db' # this worked
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app) # Linking db with app on line 6
